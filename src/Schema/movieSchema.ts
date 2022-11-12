@@ -9,7 +9,8 @@ export const insertMovieSchema = Joi.object({
 });
 
 export const updateMovieSchema = Joi.object({
-  reviews: Joi.string(),
+  reviews: Joi.string().required(),
+  id: Joi.number().required(),
 });
 
 export const listMovieSchema = Joi.object({

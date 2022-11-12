@@ -1,21 +1,31 @@
 import express from "express";
 import {
   countMovie,
+  genreSelect,
   insertMovie,
+  listMovie,
   movieDelete,
-  movieList,
+  movieUpdate,
+  streamingsList,
 } from "../Controllers/movieControllers";
 import { validateSchema } from "../Middlewares/validateSchema";
-import { insertMovieSchema, listMovieSchema } from "../Schema/movieSchema";
+import {
+  insertMovieSchema,
+  listMovieSchema,
+  updateMovieSchema,
+} from "../Schema/movieSchema";
 
 const movieRouter = express.Router();
-
-movieRouter.get("/movie", validateSchema(insertMovieSchema), insertMovie);
-
-movieRouter.post("/list", validateSchema(listMovieSchema), movieList);
-
-movieRouter.post("delet/:id", movieDelete);
-
+movieRouter.post("/movie", validateSchema(insertMovieSchema), insertMovie);
+movieRouter.post(
+  "/streamings",
+  validateSchema(listMovieSchema),
+  streamingsList
+);
+movieRouter.get("/delet/:id", movieDelete);
 movieRouter.get("/list", countMovie);
+movieRouter.get("/movie/genres/:id", genreSelect);
+movieRouter.get("/movie", listMovie);
+movieRouter.post("/reviews", validateSchema(updateMovieSchema), movieUpdate);
 
 export default movieRouter;
