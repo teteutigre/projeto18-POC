@@ -12,7 +12,7 @@
 - `get /delet/:id`: deleta o filme especificado
 - `post /reviews`: atualiza como visto e se opcional adiciona uma reviews sobre o filme
 
-#heavy_check_mark Técnicas e tecnologias utilizadas
+# heavy_check_mark Técnicas e tecnologias utilizadas
 
 - `Typescript`
 - `MySQL`
