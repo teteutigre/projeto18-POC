@@ -23,7 +23,7 @@ movieRouter.post(
   streamingsList
 );
 movieRouter.get("/delet/:id", movieDelete);
-movieRouter.get("/list", countMovie);
+movieRouter.get("/streamings", countMovie);
 movieRouter.get("/movie/genres/:id", genreSelect);
 movieRouter.get("/movie", listMovie);
 movieRouter.post("/reviews", validateSchema(updateMovieSchema), movieUpdate);
