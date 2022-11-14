@@ -1,4 +1,4 @@
-# <h1 align="center"> wishlist </h1>
+# <h1> wishlist </h1>
 
 # Resumo do projeto
 Uma wishlist simples de uso pessoal com o intuito de organizar filmes por nome,genero e streaming
